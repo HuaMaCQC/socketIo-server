@@ -1,0 +1,18 @@
+
+
+const app:any;
+const io:any;
+
+const user = require('UserManager')
+
+const user = new UserManager(app, io);
+
+const not = new NotificationModule({app, io});
+
+io.on('sayhi', (socket) => {
+
+    const agent = user.getUserBySocket(socket);
+
+});
+
+

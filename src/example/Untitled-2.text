@@ -1,0 +1,21 @@
+
+
+class NotificationModule {
+
+    constructor (app, private io) {
+
+
+        app.get('/letter/to/somebody', this.sendToSomebody);
+
+
+    }
+
+
+
+    sendToSomebody () {
+
+        this.io...
+
+    }
+
+}

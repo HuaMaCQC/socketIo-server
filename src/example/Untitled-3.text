@@ -1,0 +1,32 @@
+
+
+
+ UserManager class {
+
+    const agents = [];
+
+    init (app, io)  {
+
+        io.connect(socket => {
+            // socket.query. 
+            //          agent.id
+            //          agent.token
+            // check php
+
+            this.agents.push(socket);
+
+            // else
+            socket.disconnect();
+
+        });
+
+    }
+
+
+    getUserBySocket (socket) {
+        return this.agents.find(s => s === socket);
+    }
+
+}
+
+export default new UserManager();
